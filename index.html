@@ -5,18 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Parisa Farzan — Case File</title>
 <meta name="description" content="Character dossier for Parisa Farzan: ER attending, former South Faction hunter trainer, dishonorably discharged." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0c0e'/%3E%3Cpath d='M4 17h4l2-8 4 16 3-11 2 5h9' fill='none' stroke='%2322d3ee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e0b0d'/%3E%3Cpath d='M4 17h4l2-8 4 16 3-11 2 5h9' fill='none' stroke='%23c4a27a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400;1,8..60,600&family=Playfair+Display:ital,wght@0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="noise-overlay" aria-hidden="true"></div>
   <div class="scanline-overlay" aria-hidden="true"></div>
 
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top" hidden>&#8593;</button>
+
   <header class="hero" id="top">
-    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="case-stamp">CASE FILE // RESTRICTED — SOUTH FACTION ARCHIVE</div>
 
@@ -32,10 +42,10 @@
 
       <div class="vitals-panel reveal">
         <div class="vitals-header"><span class="dot"></span> LIVE MONITOR — BAY 3</div>
-        <div class="ecg-wrap">
-          <svg class="ecg" viewBox="0 0 600 100" preserveAspectRatio="none">
-            <polyline class="ecg-line ecg-line-a" points="0,50 40,50 55,20 70,80 85,10 100,50 140,50 160,45 180,55 200,50 260,50 275,20 290,80 305,10 320,50 360,50 380,45 400,55 420,50 480,50 495,20 510,80 525,10 540,50 580,50 600,50" />
-            <polyline class="ecg-line ecg-line-b" points="0,50 40,50 55,20 70,80 85,10 100,50 140,50 160,45 180,55 200,50 260,50 275,20 290,80 305,10 320,50 360,50 380,45 400,55 420,50 480,50 495,20 510,80 525,10 540,50 580,50 600,50" />
+        <div class="ecg-wrap" aria-hidden="true">
+          <svg class="ecg" viewBox="0 0 600 80" preserveAspectRatio="none">
+            <polyline class="ecg-line ecg-line-a" points="0,40 40,40 55,15 70,65 85,5 100,40 140,40 160,36 180,44 200,40 260,40 275,15 290,65 305,5 320,40 360,40 380,36 400,44 420,40 480,40 495,15 510,65 525,5 540,40 580,40 600,40" />
+            <polyline class="ecg-line ecg-line-b" points="0,40 40,40 55,15 70,65 85,5 100,40 140,40 160,36 180,44 200,40 260,40 275,15 290,65 305,5 320,40 360,40 380,36 400,44 420,40 480,40 495,15 510,65 525,5 540,40 580,40 600,40" />
           </svg>
         </div>
         <div class="vitals-stats">
@@ -62,6 +72,49 @@
   </header>
 
   <main>
+
+    <!-- ── FACECLAIM GALLERY ── -->
+    <section class="gallery-section reveal">
+      <div class="section-eyebrow">Faceclaim</div>
+      <h2 class="section-h2">Sepideh Moafi</h2>
+      <p class="gallery-note">Add your images to an <code>images/</code> folder, then replace each placeholder below with <code>&lt;img src="images/01.jpg" alt="..."&gt;</code></p>
+
+      <div class="polaroid-grid">
+
+        <figure class="polaroid" style="--rot: -2.5deg" data-caption="she does not take pictures. this one exists anyway.">
+          <div class="photo-frame" data-placeholder="images/01.jpg"></div>
+          <figcaption>she does not take pictures. this one exists anyway.</figcaption>
+        </figure>
+
+        <figure class="polaroid" style="--rot: 1.8deg" data-caption="seorin medical, night shift.">
+          <div class="photo-frame" data-placeholder="images/02.jpg"></div>
+          <figcaption>seorin medical, night shift.</figcaption>
+        </figure>
+
+        <figure class="polaroid" style="--rot: -1.2deg" data-caption="before the outbreak.">
+          <div class="photo-frame" data-placeholder="images/03.jpg"></div>
+          <figcaption>before the outbreak.</figcaption>
+        </figure>
+
+        <figure class="polaroid" style="--rot: 2.4deg" data-caption="south faction trainer. she was good at it.">
+          <div class="photo-frame" data-placeholder="images/04.jpg"></div>
+          <figcaption>south faction trainer. she was good at it.</figcaption>
+        </figure>
+
+        <figure class="polaroid" style="--rot: -0.8deg" data-caption="still scanning the crowd.">
+          <div class="photo-frame" data-placeholder="images/05.jpg"></div>
+          <figcaption>still scanning the crowd.</figcaption>
+        </figure>
+
+        <figure class="polaroid" style="--rot: 1.5deg" data-caption="the face she makes when she's already decided.">
+          <div class="photo-frame" data-placeholder="images/06.jpg"></div>
+          <figcaption>the face she makes when she's already decided.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ── QUICK FACTS ── -->
     <section class="panel facts reveal">
       <div class="panel-heading">
         <h2>Quick Facts</h2>
@@ -69,7 +122,7 @@
       </div>
       <div class="facts-grid">
         <div class="fact"><span class="fact-label">Full Name</span><span class="fact-value">Parisa Farzan</span></div>
-        <div class="fact"><span class="fact-label">Nickname / Alias</span><span class="fact-value">Paris • Far • Fariza</span></div>
+        <div class="fact"><span class="fact-label">Nickname / Alias</span><span class="fact-value">Paris · Far · Fariza</span></div>
         <div class="fact"><span class="fact-label">Age</span><span class="fact-value">39</span></div>
         <div class="fact"><span class="fact-label">DOB</span><span class="fact-value">February 2, 1987</span></div>
         <div class="fact"><span class="fact-label">Occupation</span><span class="fact-value">ER Attending at Seorin Medical</span></div>
@@ -79,6 +132,7 @@
       </div>
     </section>
 
+    <!-- ── PILLARS ── -->
     <section class="pillars reveal">
       <div class="pillars-grid">
         <div class="pillar-card">
@@ -104,17 +158,18 @@
       </div>
     </section>
 
+    <!-- ── DOSSIER TABS ── -->
     <section class="panel dossier-tabs reveal">
       <div class="tabs-list" role="tablist">
         <button class="tab active" data-tab="timeline" role="tab" aria-selected="true">Timeline</button>
         <button class="tab" data-tab="voice" role="tab" aria-selected="false">Voice</button>
         <button class="tab" data-tab="reputation" role="tab" aria-selected="false">Reputation</button>
         <button class="tab" data-tab="quotes" role="tab" aria-selected="false">Quotes</button>
-        <div class="tab-underline" id="tabUnderline"></div>
+        <div class="tab-underline" id="tabUnderline" aria-hidden="true"></div>
       </div>
 
       <div class="tab-panels">
-        <div class="tab-panel active" data-panel="timeline">
+        <div class="tab-panel active" data-panel="timeline" role="tabpanel">
           <p class="section-sub">Not a résumé. More like a trail of controlled damage.</p>
           <div class="timeline">
             <div class="timeline-item">
@@ -148,7 +203,7 @@
           </div>
         </div>
 
-        <div class="tab-panel" data-panel="voice">
+        <div class="tab-panel" data-panel="voice" role="tabpanel">
           <p class="section-sub">If she sounds kind, check for smoke.</p>
           <div class="grid-2">
             <div class="line-card">Speaks directly. No wasted words.</div>
@@ -160,7 +215,7 @@
           </div>
         </div>
 
-        <div class="tab-panel" data-panel="reputation">
+        <div class="tab-panel" data-panel="reputation" role="tabpanel">
           <p class="section-sub">Or think they know.</p>
           <div class="grid-2">
             <div class="line-card">Former trainees still hear her voice when they make bad decisions.</div>
@@ -170,7 +225,7 @@
           </div>
         </div>
 
-        <div class="tab-panel" data-panel="quotes">
+        <div class="tab-panel" data-panel="quotes" role="tabpanel">
           <p class="section-sub">Mostly concern disguised as insult.</p>
           <div class="quote-display">
             <span class="quote-mark">&ldquo;</span>
@@ -181,6 +236,7 @@
       </div>
     </section>
 
+    <!-- ── ROLE MAP + PROBLEM ── -->
     <section class="panel role-problem reveal">
       <div class="role-map">
         <h3>Role Map</h3>
@@ -215,11 +271,155 @@
         </div>
       </div>
     </section>
+
+    <!-- ── SOLOS ── -->
+    <section class="solos-section">
+      <div class="section-eyebrow">Written Work</div>
+      <h2 class="section-h2">Solos</h2>
+      <p class="solos-intro">Standalone pieces covering key moments. Seven scenes. All of them true.</p>
+
+      <!-- SOLO 01 — replace title, context, body, and tags with real content -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">01</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo. This is where the scene goes — the internal monologue, the moment, whatever it is that happened and why it mattered. Write as much or as little as the scene demands.</em></p>
+          <p><em>Add more paragraphs here as needed.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 02 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">02</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 03 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">03</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 04 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">04</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 05 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">05</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 06 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">06</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+      <!-- SOLO 07 -->
+      <article class="solo reveal">
+        <header class="solo-head">
+          <span class="solo-num">07</span>
+          <div class="solo-meta">
+            <h3 class="solo-title">Solo Title Here</h3>
+            <p class="solo-context">Year · Location · Event</p>
+          </div>
+        </header>
+        <div class="solo-body">
+          <p><em>Replace this with the text of the solo.</em></p>
+        </div>
+        <footer class="solo-foot">
+          <span class="solo-tag">#parisa farzan</span>
+          <span class="solo-tag">#solo</span>
+          <span class="solo-tag">#tag here</span>
+        </footer>
+      </article>
+
+    </section>
+
   </main>
 
-  <footer class="reveal">
+  <footer class="site-footer reveal">
     <p class="eyebrow">Parisa Farzan</p>
     <p class="closing">She keeps trying to save people through different systems.<br />Every system eventually asks her to become someone she refuses to be.</p>
+    <a href="#top" class="footer-top">back to top ↑</a>
   </footer>
 
   <script src="script.js"></script>
