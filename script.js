@@ -132,6 +132,14 @@
   showQuote(0, false);
   startCycle();
 
+  /* ── auto-load polaroid images from data-placeholder ── */
+  document.querySelectorAll(".photo-frame[data-placeholder]").forEach((frame) => {
+    const img = document.createElement("img");
+    img.alt = frame.closest("figure")?.querySelector("figcaption")?.textContent?.trim() || "";
+    img.src = frame.dataset.placeholder;
+    frame.appendChild(img);
+  });
+
   /* ── polaroid lightbox ── */
   const lightbox        = document.getElementById("lightbox");
   const lightboxImg     = document.getElementById("lightboxImg");
