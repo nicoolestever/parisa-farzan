@@ -397,7 +397,7 @@ main {
 
 .polaroid-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -736,6 +736,24 @@ main {
 .problem-scroll::-webkit-scrollbar-thumb { background: rgba(196,162,122,0.28); border-radius: 999px; }
 
 /* ─── solos ─── */
+details.solo > summary { list-style: none; cursor: pointer; }
+details.solo > summary::-webkit-details-marker { display: none; }
+summary.solo-head { margin-bottom: 0; }
+details[open] > summary.solo-head { margin-bottom: 20px; }
+
+.solo-toggle {
+  margin-left: auto;
+  font-size: 20px;
+  color: var(--amber);
+  opacity: 0.7;
+  transition: transform 0.25s ease, opacity 0.25s;
+  flex-shrink: 0;
+  line-height: 1;
+  align-self: center;
+}
+details[open] > summary > .solo-toggle { transform: rotate(45deg); opacity: 1; }
+
+
 .solos-section {
   max-width: 1100px;
   padding-bottom: 8px;
@@ -872,7 +890,6 @@ main {
   .pillars-grid   { grid-template-columns: repeat(2, 1fr); }
   .facts-grid     { grid-template-columns: 1fr; }
   .role-problem   { grid-template-columns: 1fr; }
-  .polaroid-grid  { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
